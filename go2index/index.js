@@ -4,8 +4,8 @@ var authConfig = {
   version: "1.1.2", // 程序版本
   theme: "acrou",
   // 强烈推荐使用自己的 client_id 和 client_secret
-  client_id: "202264815644.apps.googleusercontent.com",
-  client_secret: "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
+  client_id: "528978157835-87j8t3nikeugd1fefqufdb9knu9551n8.apps.googleusercontent.com",
+  client_secret: "idBGUiLZSnloP5kWZbDDbjFj",
   refresh_token: "", // 授权 token
   /**
    * 设置要显示的多个云端硬盘；按格式添加多个
