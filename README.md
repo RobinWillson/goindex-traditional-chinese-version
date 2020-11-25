@@ -7,7 +7,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 This theme's goindex is currently based on [yanzai/goindex](https://github.com/yanzai/goindex/)
 
-[README](README.md) | [中文文档](README_zh.md)
+[README](README.md) | [中文文檔](README_zh.md)
 
 ## Demo  
 
