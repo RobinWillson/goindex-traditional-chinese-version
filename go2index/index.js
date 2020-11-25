@@ -1,24 +1,24 @@
 // =======Options START=======
 var authConfig = {
-  siteName: "GoIndex-theme-acrou", // 网站名称
+  siteName: "GoIndex-theme-acrou", // 網站名稱
   version: "1.1.2", // 程序版本
   theme: "acrou",
-  // 强烈推荐使用自己的 client_id 和 client_secret
+  // 強烈推薦使用自己的 client_id 和 client_secret
   client_id: "528978157835-87j8t3nikeugd1fefqufdb9knu9551n8.apps.googleusercontent.com",
   client_secret: "idBGUiLZSnloP5kWZbDDbjFj",
-  refresh_token: "", // 授权 token
+  refresh_token: "", // 授權 token
   /**
-   * 设置要显示的多个云端硬盘；按格式添加多个
-   * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
-   * [name]: 显示的名称
-   * [user]: Basic Auth 的用户名
-   * [pass]: Basic Auth 的密码
-   * [protect_file_link]: Basic Auth 是否用于保护文件链接，默认值（不设置时）为 false，即不保护文件链接（方便 直链下载/外部播放 等）
-   * 每个盘的 Basic Auth 都可以单独设置。Basic Auth 默认保护该盘下所有文件夹/子文件夹路径
-   * 【注意】默认不保护文件链接，这样可以方便 直链下载/外部播放;
-   *       如果要保护文件链接，需要将 protect_file_link 设置为 true，此时如果要进行外部播放等操作，需要将 host 替换为 user:pass@host 的 形式
-   * 不需要 Basic Auth 的盘，保持 user 和 pass 同时为空即可。（直接不设置也可以）
-   * 【注意】对于id设置为为子文件夹id的盘将不支持搜索功能（不影响其他盘）。
+   * 設置要顯示的多個雲端硬盤；按格式添加多個
+   * [id]: 可以是 團隊盤id、子文件夾id、或者"root"（代表個人盤根目錄）；
+   * [name]: 顯示的名稱
+   * [user]: Basic Auth 的用戶名
+   * [pass]: Basic Auth 的密碼
+   * [protect_file_link]: Basic Auth 是否用於保護文件鏈接，默認值（不設置時）為 false，即不保護文件鏈接（方便 直鏈下載/外部播放 等）
+   * 每個盤的 Basic Auth 都可以單獨設置。Basic Auth 默認保護該盤下所有文件夾/子文件夾路徑
+   * 【注意】默認不保護文件鏈接，這樣可以方便 直鏈下載/外部播放;
+   *       如果要保護文件鏈接，需要將 protect_file_link 設置為 true，此時如果要進行外部播放等操作，需要將 host 替換為 user:pass@host 的 形式
+   * 不需要 Basic Auth 的盤，保持 user 和 pass 同時為空即可。（直接不設置也可以）
+   * 【注意】對於id設置為為子文件夾id的盤將不支持搜索功能（不影響其他盤）。
    */
   roots: [
     {
@@ -41,34 +41,34 @@ var authConfig = {
   ],
   default_gd: 0,
   /**
-   * 文件列表页面每页显示的数量。【推荐设置值为 100 到 1000 之间】；
-   * 如果设置大于1000，会导致请求 drive api 时出错；
-   * 如果设置的值过小，会导致文件列表页面滚动条增量加载（分页加载）失效；
-   * 此值的另一个作用是，如果目录内文件数大于此设置值（即需要多页展示的），将会对首次列目录结果进行缓存。
+   * 文件列表頁面每頁顯示的數量。【推薦設置值為 100 到 1000 之間】；
+   * 如果設置大於1000，會導致請求 drive api 時出錯；
+   * 如果設置的值過小，會導致文件列表頁面滾動條增量加載（分頁加載）失效；
+   * 此值的另一個作用是，如果目錄內文件數大於此設置值（即需要多頁展示的），將會對首次列目錄結果進行緩存。
    */
   files_list_page_size: 50,
   /**
-   * 搜索结果页面每页显示的数量。【推荐设置值为 50 到 1000 之间】；
-   * 如果设置大于1000，会导致请求 drive api 时出错；
-   * 如果设置的值过小，会导致搜索结果页面滚动条增量加载（分页加载）失效；
-   * 此值的大小影响搜索操作的响应速度。
+   * 搜索結果頁面每頁顯示的數量。【推薦設置值為 50 到 1000 之間】；
+   * 如果設置大於1000，會導致請求 drive api 時出錯；
+   * 如果設置的值過小，會導致搜索結果頁面滾動條增量加載（分頁加載）失效；
+   * 此值的大小影響搜索操作的響應速度。
    */
   search_result_list_page_size: 50,
-  // 确认有 cors 用途的可以开启
+  // 確認有 cors 用途的可以開啟
   enable_cors_file_down: false,
   /**
-   * 上面的 basic auth 已经包含了盘内全局保护的功能。所以默认不再去认证 .password 文件内的密码;
-   * 如果在全局认证的基础上，仍需要给某些目录单独进行 .password 文件内的密码验证的话，将此选项设置为 true;
-   * 【注意】如果开启了 .password 文件密码验证，每次列目录都会额外增加查询目录内 .password 文件是否存在的开销。
+   * 上面的 basic auth 已經包含了盤內全局保護的功能。所以默認不再去認證 .password 文件內的密碼;
+   * 如果在全局認證的基礎上，仍需要給某些目錄單獨進行 .password 文件內的密碼驗證的話，將此選項設置為 true;
+   * 【注意】如果開啟了 .password 文件密碼驗證，每次列目錄都會額外增加查詢目錄內 .password 文件是否存在的開銷。
    */
   enable_password_file_verify: false,
 };
 
 var themeOptions = {
   cdn: "https://cdn.jsdelivr.net/gh/Aicirou/goindex-theme-acrou",
-  // 主题版本号
+  // 主題版本號
   version: "2.0.8",
-  //可选默认系统语言:en/zh-chs/zh-cht
+  //可選默認系統語言:en/zh-chs/zh-cht
   languages: "en",
   render: {
     /**
@@ -82,25 +82,25 @@ var themeOptions = {
      */
     readme_md: false,
     /**
-     * 是否渲染文件/文件夹描述
+     * 是否渲染文件/文件夾描述
      * Render file/folder description or not
      */
     desc: false,
   },
   /**
-   * 视频播放器选项
+   * 視頻播放器選項
    * Video player options
    */
   video: {
     /**
-     * 播放器api（不指定则使用默认播放器）
+     * 播放器api（不指定則使用默認播放器）
      * Player api(Use default player if not specified)
      */
     api: "",
     autoplay: true,
   },
   /**
-   * 音频播放器选项
+   * 音頻播放器選項
    * Audio player options
    */
   audio: {},
@@ -112,7 +112,7 @@ var themeOptions = {
  */
 const FUNCS = {
   /**
-   * 转换成针对谷歌搜索词法相对安全的搜索关键词
+   * 轉換成針對谷歌搜索詞法相對安全的搜索關鍵詞
    */
   formatSearchKeyword: function(keyword) {
     let nothing = "";
@@ -192,7 +192,7 @@ async function handleRequest(request) {
       await gd.init();
       gds.push(gd);
     }
-    // 这个操作并行，提高效率
+    // 這個操作並行，提高效率
     let tasks = [];
     gds.forEach((gd) => {
       tasks.push(gd.initRootType());
@@ -202,14 +202,14 @@ async function handleRequest(request) {
     }
   }
 
-  // 从 path 中提取 drive order
-  // 并根据 drive order 获取对应的 gd instance
+  // 從 path 中提取 drive order
+  // 並根據 drive order 獲取對應的 gd instance
   let gd;
   let url = new URL(request.url);
   let path = decodeURI(url.pathname);
 
   /**
-   * 重定向至起始页
+   * 重定向至起始頁
    * @returns {Response}
    */
   function redirectToIndexPage() {
@@ -221,7 +221,7 @@ async function handleRequest(request) {
 
   if (path == "/") return redirectToIndexPage();
   if (path.toLowerCase() == "/favicon.ico") {
-    // 后面可以找一个 favicon
+    // 後面可以找一個 favicon
     return new Response("", { status: 404 });
   }
 
@@ -244,11 +244,11 @@ async function handleRequest(request) {
     // 搜索
     if (command === "search") {
       if (request.method === "POST") {
-        // 搜索结果
+        // 搜索結果
         return handleSearch(request, gd);
       } else {
         const params = url.searchParams;
-        // 搜索页面
+        // 搜索頁面
         return new Response(
           html(gd.order, {
             q: params.get("q") || "",
@@ -340,7 +340,7 @@ async function apiRequest(request, gd) {
     let deferred_pass = gd.password(path);
     let body = await request.text();
     body = JSON.parse(body);
-    // 这样可以提升首次列目录时的速度。缺点是，如果password验证失败，也依然会产生列目录的开销
+    // 這樣可以提升首次列目錄時的速度。缺點是，如果password驗證失敗，也依然會產生列目錄的開銷
     let deferred_list_result = gd.list(
       path,
       body.page_token,
@@ -366,7 +366,7 @@ async function apiRequest(request, gd) {
   }
 }
 
-// 处理 search
+// 處理 search
 async function handleSearch(request, gd) {
   const option = {
     status: 200,
@@ -383,10 +383,10 @@ async function handleSearch(request, gd) {
 }
 
 /**
- * 处理 id2path
- * @param request 需要 id 参数
+ * 處理 id2path
+ * @param request 需要 id 參數
  * @param gd
- * @returns {Promise<Response>} 【注意】如果从前台接收的id代表的项目不在目标gd盘下，那么response会返回给前台一个空字符串""
+ * @returns {Promise<Response>} 【注意】如果從前台接收的id代表的項目不在目標gd盤下，那麽response會返回給前台一個空字符串""
  */
 async function handleId2Path(request, gd) {
   const option = {
@@ -401,13 +401,13 @@ async function handleId2Path(request, gd) {
 
 class googleDrive {
   constructor(authConfig, order) {
-    // 每个盘对应一个order，对应一个gd实例
+    // 每個盤對應一個order，對應一個gd實例
     this.order = order;
     this.root = authConfig.roots[order];
     this.root.protect_file_link = this.root.protect_file_link || false;
     this.url_path_prefix = `/${order}:`;
     this.authConfig = authConfig;
-    // TODO: 这些缓存的失效刷新策略，后期可以制定一下
+    // TODO: 這些緩存的失效刷新策略，後期可以制定一下
     // path id
     this.paths = [];
     // path file
@@ -425,20 +425,20 @@ class googleDrive {
   }
 
   /**
-   * 初次授权；然后获取 user_drive_real_root_id
+   * 初次授權；然後獲取 user_drive_real_root_id
    * @returns {Promise<void>}
    */
   async init() {
     await this.accessToken();
     /*await (async () => {
-            // 只获取1次
+            // 只獲取1次
             if (authConfig.user_drive_real_root_id) return;
             const root_obj = await (gds[0] || this).findItemById('root');
             if (root_obj && root_obj.id) {
                 authConfig.user_drive_real_root_id = root_obj.id
             }
         })();*/
-    // 等待 user_drive_real_root_id ，只获取1次
+    // 等待 user_drive_real_root_id ，只獲取1次
     if (authConfig.user_drive_real_root_id) return;
     const root_obj = await (gds[0] || this).findItemById("root");
     if (root_obj && root_obj.id) {
@@ -447,7 +447,7 @@ class googleDrive {
   }
 
   /**
-   * 获取根目录类型，设置到 root_type
+   * 獲取根目錄類型，設置到 root_type
    * @returns {Promise<void>}
    */
   async initRootType() {
@@ -540,7 +540,7 @@ class googleDrive {
     return obj.files[0];
   }
 
-  // 通过reqeust cache 来缓存
+  // 通過reqeust cache 來緩存
   async list(path, page_token = null, page_index = 0) {
     if (this.path_children_cache == undefined) {
       // { <path> :[ {nextPageToken:'',data:{}}, {nextPageToken:'',data:{}} ...], ...}
@@ -563,7 +563,7 @@ class googleDrive {
     let id = await this.findPathId(path);
     let result = await this._ls(id, page_token, page_index);
     let data = result.data;
-    // 对有多页的，进行缓存
+    // 對有多頁的，進行緩存
     if (result.nextPageToken && data.files) {
       if (!Array.isArray(this.path_children_cache[path])) {
         this.path_children_cache[path] = [];
@@ -641,9 +641,9 @@ class googleDrive {
   }
 
   /**
-   * 通过 id 获取 share drive 信息
+   * 通過 id 獲取 share drive 信息
    * @param any_id
-   * @returns {Promise<null|{id}|any>} 任何非正常情况都返回 null
+   * @returns {Promise<null|{id}|any>} 任何非正常情況都返回 null
    */
   async getShareDriveObjById(any_id) {
     if (!any_id) return null;
@@ -678,7 +678,7 @@ class googleDrive {
     }
     let keyword = FUNCS.formatSearchKeyword(origin_keyword);
     if (!keyword) {
-      // 关键词为空，返回
+      // 關鍵詞為空，返回
       return empty_result;
     }
     let words = keyword.split(/\s+/);
@@ -686,7 +686,7 @@ class googleDrive {
       "' AND name contains '"
     )}'`;
 
-    // corpora 为 user 是个人盘 ，为 drive 是团队盘。配合 driveId
+    // corpora 為 user 是個人盤 ，為 drive 是團隊盤。配合 driveId
     let params = {};
     if (is_user_drive) {
       params.corpora = "user";
@@ -722,10 +722,10 @@ class googleDrive {
   }
 
   /**
-   * 一层一层的向上获取这个文件或文件夹的上级文件夹的 file 对象。注意：会很慢！！！
-   * 最多向上寻找到当前 gd 对象的根目录 (root id)
-   * 只考虑一条单独的向上链。
-   * 【注意】如果此id代表的项目不在目标gd盘下，那么此函数会返回null
+   * 一層一層的向上獲取這個文件或文件夾的上級文件夾的 file 對象。注意：會很慢！！！
+   * 最多向上尋找到當前 gd 對象的根目錄 (root id)
+   * 只考慮一條單獨的向上鏈。
+   * 【注意】如果此id代表的項目不在目標gd盤下，那麽此函數會返回null
    *
    * @param child_id
    * @param contain_myself
@@ -737,7 +737,7 @@ class googleDrive {
     const user_drive_real_root_id = authConfig.user_drive_real_root_id;
     const is_user_drive = gd.root_type === CONSTS.gd_root_type.user_drive;
 
-    // 自下向上查询的终点目标id
+    // 自下向上查詢的終點目標id
     const target_top_id = is_user_drive ? user_drive_real_root_id : gd_root_id;
     const fields = CONSTS.default_file_fields;
 
@@ -777,9 +777,9 @@ class googleDrive {
   }
 
   /**
-   * 获取相对于本盘根目录的path
+   * 獲取相對於本盤根目錄的path
    * @param child_id
-   * @returns {Promise<string>} 【注意】如果此id代表的项目不在目标gd盘下，那么此方法会返回空字符串""
+   * @returns {Promise<string>} 【注意】如果此id代表的項目不在目標gd盤下，那麽此方法會返回空字符串""
    */
   async findPathById(child_id) {
     if (this.id_path_cache[child_id]) {
@@ -790,7 +790,7 @@ class googleDrive {
     if (!p_files || p_files.length < 1) return "";
 
     let cache = [];
-    // 把查出来的每一级的path和id都缓存一下
+    // 把查出來的每一級的path和id都緩存一下
     p_files.forEach((value, idx) => {
       const is_folder =
         idx === 0 ? p_files[idx].mimeType === CONSTS.folder_mime_type : true;
@@ -817,7 +817,7 @@ class googleDrive {
     return cache[0].path;
   }
 
-  // 根据id获取file item
+  // 根據id獲取file item
   async findItemById(id) {
     const is_user_drive = this.root_type === CONSTS.gd_root_type.user_drive;
     let url = `https://www.googleapis.com/drive/v3/files/${id}?fields=${
