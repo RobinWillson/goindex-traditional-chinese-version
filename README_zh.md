@@ -100,7 +100,7 @@ audio: {
   audios: [
     {
       name: "Mojito",
-      artist: "周傑倫",
+      artist: "周杰倫",
       url: "https://xx.mp3",
       lrc: "https://xx.lrc",
       cover: "https://xx.jpg"
