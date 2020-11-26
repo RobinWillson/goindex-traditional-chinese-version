@@ -5,7 +5,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 [go2index/index.js](https://github.com/Aicirou/goindex-theme-acrou/go2index) is the content of the Workers script.  
 
-This theme's goindex is currently based on [yanzai/goindex](https://github.com/yanzai/goindex/)
+This theme's goindex is currently based on [Achrou/goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
 
 [README](README.md) | [中文文檔](README_zh.md)
 
