@@ -33,11 +33,9 @@ Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/)
 
 ## 快速部署
 
-1. 打開以下任意網址（哪個快用哪個） 
+1. 打開以下任意網址
 
-   - https://install.achirou.workers.dev
-   - https://goindex-quick-install.glitch.me
-   - https://goindex-install.herokuapp.com
+   - https://goindex-auth.glitch.me
 
 2. 授權並獲取授權碼
 
@@ -49,7 +47,7 @@ Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/)
 2. 創建一個 [OAuth client ID](https://console.developers.google.com/apis/credentials/oauthclient)
 3. 本地安裝[rclone](https://rclone.org/downloads/)
 4. 使用`rclone`獲取`refresh_token`
-5. 下載`index.js` (https://github.com/Aicirou/goindex-theme-acrou/tree/master/go2index) 然後替換`client_id`,`client_secret`,`refresh_token` 為你剛剛獲取到的
+5. 下載`index.js` (https://github.com/Eggsmemory/goindex-theme-acrou/blob/master/go2index/index.js) 然後替換`client_id`,`client_secret`,`refresh_token` 為你剛剛獲取到的
 6. 把代碼部署到[Cloudflare Workers](https://www.cloudflare.com/)
 
 > 如果你寫了一篇不錯的文章，想分享給大家，請提交Issues，我會把鏈接貼在這里。
