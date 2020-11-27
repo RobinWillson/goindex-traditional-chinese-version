@@ -10,7 +10,7 @@
 
 ## 預覽  
 
-Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/) 
+EGG的圖床: [https://goindex-egg.eggsmemory.workers.dev](https://goindex-egg.eggsmemory.workers.dev) 
 
 ## 特色
 
