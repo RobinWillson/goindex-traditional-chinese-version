@@ -11,7 +11,7 @@ This theme's goindex is currently based on [Achrou/goindex-theme-acrou](https://
 
 ## Demo  
 
-Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/) 
+EGG的圖床: [https://goindex-egg.eggsmemory.workers.dev](https://goindex-egg.eggsmemory.workers.dev) 
 
 ## Features
 
