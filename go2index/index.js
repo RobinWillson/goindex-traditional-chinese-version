@@ -4,8 +4,8 @@ var authConfig = {
   version: "1.1.2", // 程序版本
   theme: "acrou",
   // 強烈推薦使用自己的 client_id 和 client_secret
-  client_id: "628454642935-5g51hskcpkjo7731s7kbr9vucu9mgpj4.apps.googleusercontent.com",
-  client_secret: "2V10_1A65494xOVnVGEL7ZwJ",
+  client_id: "628454642935-0gudrq7k61e7n17ldr1n564ofkdsun82.apps.googleusercontent.com",
+  client_secret: "WxIuEXmwiMSWAtZ6DgKxjwEh",
   refresh_token: "", // 授權 token
   /**
    * 設置要顯示的多個雲端硬盤；按格式添加多個
